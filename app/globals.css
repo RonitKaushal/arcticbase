@@ -85,13 +85,14 @@
   --card-foreground: #f0f0f0;
   --popover: #1a1a1a;
   --popover-foreground: #f0f0f0;
-  --primary: #ff0033;
+  --primary: #eac5ff;
   --primary-foreground: #000000;
   --secondary: #330000;
   --secondary-foreground: #ffcccc;
   --muted: #330000;
   --muted-foreground: #cccccc;
   --accent: #ff4d4d;
+  --transparent: #00000000;
   --accent-foreground: #000000;
   --destructive: #ff6666;
   --border: #333333;
