@@ -15,7 +15,7 @@ interface ServiceCategory {
 
 const serviceCategories: ServiceCategory[] = [
   {
-    category: "Web Design",
+    category: "Web Design ",
     services: [
       {
         title: "Portfolio Sites",

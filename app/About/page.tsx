@@ -39,7 +39,7 @@ const teamMembers = [
     image: "/members/Devanshi Makwan.png",
   },
   {
-    name: "Bikram",
+    name: "Bikram ",
     role: "Web Security Expert",
     image: "/members/Bikram.png",
   },
