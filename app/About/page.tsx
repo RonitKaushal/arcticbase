@@ -22,9 +22,9 @@ const teamMembers = [
     role: "AI-ML Engineer",
     image: "/members/Heshva Soni.png",
   },
-    {
+  {
     name: "Khushi Kaushal",
-    role: "Marketing Lead",
+    role: "UI UX Designer",
     image: "/members/Khushi Kaushal.png",
   },
 
@@ -42,6 +42,11 @@ const teamMembers = [
     name: "Bikram ",
     role: "Web Security Expert",
     image: "/members/Bikram.png",
+  },
+  {
+    name: "Hardi Patel",
+    role: "Front-End Developer",
+    image: "/members/Hardi Patel.png",
   },
 ];
 
