@@ -49,11 +49,11 @@ export const metadata = {
     title: "Arctic Base – Student Team for Web Development & Design",
     description:
       "We’re a group of passionate students building high-quality websites, branding, and UI/UX—without the agency price tag.",
-    url: "https://arcticbase.tech",
+    url: "https://arctic-base.vercel.app",
     siteName: "Arctic Base",
     images: [
       {
-        url: "https://arcticbase.tech/Arctic Base logo.png", // Replace with your image URL
+        url: "https://arctic-base.vercel.app/og-image.jpg", // Replace with your image URL
         width: 1200,
         height: 630,
         alt: "Arctic Base Website Preview",
@@ -67,9 +67,9 @@ export const metadata = {
     title: "Arctic Base – Student Team for Web Development & Design",
     description:
       "Affordable, high-quality web and design services by students. We create clean, fast, and modern websites with passion.",
-    images: ["https://arcticbase.tech/Arctic Base logo.png"],
+    images: ["https://arctic-base.vercel.app/og-image.jpg"],
   },
-  metadataBase: new URL("https://arcticbase.tech"),
+  metadataBase: new URL("https://arctic-base.vercel.app"),
 };
 
 export default function RootLayout({
