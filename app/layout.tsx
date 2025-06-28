@@ -3,7 +3,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import NavBar from "@/components/home/navbar";
 import Footer from "@/components/home/footer";
-import { Analytics } from "@vercel/analytics/next"
+import { Analytics } from "@vercel/analytics/next";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -17,7 +17,8 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   title: "Arctic Base – Student Team for Web Development & Design",
-  description: "Arctic Base is a student-led team offering affordable, professional web development, design, and branding services. No hierarchy, just trust, teamwork, and great results.",
+  description:
+    "Arctic Base is a student-led team offering affordable, professional web development, design, and branding services. No hierarchy, just trust, teamwork, and great results.",
   keywords: [
     "Arctic Base",
     "student developers",
@@ -28,10 +29,22 @@ export const metadata = {
     "freelance student devs",
     "affordable website design",
     "branding services by students",
-    "creative student agency"
+    "creative student agency",
   ],
   authors: [{ name: "Ronit Kaushal", url: "https://arcticbase.tech" }],
   creator: "Ronit Kaushal",
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+    other: [
+      {
+        rel: "icon",
+        url: "/favicon.png",
+        type: "image/svg+xml",
+      },
+    ],
+  },
   openGraph: {
     title: "Arctic Base – Student Team for Web Development & Design",
     description:
@@ -59,13 +72,11 @@ export const metadata = {
   metadataBase: new URL("https://arcticbase.tech"),
 };
 
-
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-
   return (
     <html lang="en" suppressHydrationWarning>
       <body
@@ -78,7 +89,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <NavBar />
-          <Analytics/>
+          <Analytics />
           {children}
           <Footer />
         </ThemeProvider>
