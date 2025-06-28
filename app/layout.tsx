@@ -16,46 +16,49 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Arctic Base – Student-powered Web Development",
-  description:
-    "Affordable websites built by students. No drama, just clean code and good design.",
+  title: "Arctic Base – Student Team for Web Development & Design",
+  description: "Arctic Base is a student-led team offering affordable, professional web development, design, and branding services. No hierarchy, just trust, teamwork, and great results.",
   keywords: [
-    "web development",
-    "student agency",
     "Arctic Base",
-    "freelance devs",
-    "Next.js",
-    "Tailwind",
+    "student developers",
+    "web development team",
+    "affordable design services",
+    "Next.js developers",
+    "UI UX student team",
+    "freelance student devs",
+    "affordable website design",
+    "branding services by students",
+    "creative student agency"
   ],
-  authors: [{ name: "Arctic Base Team", url: "https://arcticbase.tech" }],
-  robots: "index, follow",
+  authors: [{ name: "Ronit Kaushal", url: "https://arcticbase.tech" }],
+  creator: "Ronit Kaushal",
   openGraph: {
-    title: "Arctic Base – Web Dev Without the Corporate Nonsense",
+    title: "Arctic Base – Student Team for Web Development & Design",
     description:
-      "We build clean, fast websites at chai-level pricing. Built by students, loved by clients.",
+      "We’re a group of passionate students building high-quality websites, branding, and UI/UX—without the agency price tag.",
     url: "https://arcticbase.tech",
     siteName: "Arctic Base",
     images: [
       {
-        url: "https://arcticbase.tech/og-image.png",
+        url: "https://arcticbase.tech/Arctic Base logo.png", // Replace with your image URL
         width: 1200,
         height: 630,
-        alt: "Arctic Base Banner",
+        alt: "Arctic Base Website Preview",
       },
     ],
+    locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Arctic Base – Student-led Web Agency",
+    title: "Arctic Base – Student Team for Web Development & Design",
     description:
-      "Affordable, fast, and drama-free websites built by skilled student devs.",
-    images: ["https://arcticbase.tech/og-image.png"],
+      "Affordable, high-quality web and design services by students. We create clean, fast, and modern websites with passion.",
+    images: ["https://arcticbase.tech/Arctic Base logo.png"],
   },
-  icons: {
-    icon: "/favicon.png",
-  },
+  metadataBase: new URL("https://arcticbase.tech"),
 };
+
 
 export default function RootLayout({
   children,
