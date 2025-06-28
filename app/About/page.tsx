@@ -7,9 +7,9 @@ const teamMembers = [
     image: "/members/Ronit Kaushal.png",
   },
   {
-    name: "Diya Pandya",
-    role: "Marketing Lead",
-    image: "/members/Diya Pandya.png",
+    name: "Khushi Kaushal",
+    role: "UI UX Designer",
+    image: "/members/Khushi Kaushal.png",
   },
 
   {
@@ -23,11 +23,10 @@ const teamMembers = [
     image: "/members/Heshva Soni.png",
   },
   {
-    name: "Khushi Kaushal",
-    role: "UI UX Designer",
-    image: "/members/Khushi Kaushal.png",
+    name: "Hardi Patel",
+    role: "Front-End Developer",
+    image: "/members/Hardi Patel.png",
   },
-
   {
     name: "Tirth Chokshi",
     role: "Back-end Developer",
@@ -39,15 +38,15 @@ const teamMembers = [
     image: "/members/Devanshi Makwan.png",
   },
   {
-    name: "Bikram ",
+    name: "Bikram Sadhukhan",
     role: "Web Security Expert",
     image: "/members/Bikram.png",
   },
-  {
-    name: "Hardi Patel",
-    role: "Front-End Developer",
-    image: "/members/Hardi Patel.png",
-  },
+  // {
+  //   name: "Diya Pandya",
+  //   role: "Marketing Lead",
+  //   image: "/members/Diya Pandya.png",
+  // },
 ];
 
 export default function AboutPage() {
@@ -58,9 +57,9 @@ export default function AboutPage() {
           about us
         </h2>
         <p className="text-4xl md:text-5xl GeistBold">
-          At Arctic Base, we’re just a bunch of students trying to turn caffeine
-          and code into cash. We build cool websites, design awesome stuff, and
-          help brands glow up online—affordably!
+          Arctic Base is a team of passionate students who work together to
+          build real projects with trust, creativity, and skill—without any
+          titles, hierarchy, or corporate rules.
         </p>
       </div>
 

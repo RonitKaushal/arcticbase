@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import clsx from "clsx";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 interface Service {
   title: string;
@@ -125,10 +126,11 @@ export default function Services() {
       <div className="transition-all duration-500 ease-in-out flex flex-col justify-center items-center w-full py-10">
         <div className="flex flex-col md:flex-row justify-between items-center w-full max-w-6xl md:px-0">
           <div className="flex justify-center items-center space-x-2 text-xl md:text-2xl w-full text-center text-primary">
-            <p>View More</p>
-            <ArrowRight/>
+            <Link href="/Services">
+              <p className="cursor-pointer hover:underline">View More</p>
+            </Link>
+            <ArrowRight />
           </div>
-
         </div>
       </div>
     </div>

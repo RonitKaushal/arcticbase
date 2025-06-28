@@ -4,10 +4,11 @@ import { useEffect, useRef, useState } from "react";
 import clsx from "clsx";
 
 const reasons = [
-  "No boss breathing down our necks—just our team vibing and building cool stuff.",
-  "Corporate gives you long meetings and short results, while we give you short chats and long-lasting websites.",
-  "At corporates, one person does everything badly; here, one person does one thing really well.",
-  "Corporate delays with “internal approvals,” we say “cool, done” and send it before you even ask.",
+  "We offer high-quality work at prices that won’t break your budget—perfect for startups, students, and small businesses.",
+  "We may be students, but our work doesn’t look like homework. It’s clean, polished, and client-approved every time.",
+  "No drama, just good vibes. We work together like a well-fed startup family—minus the beanbags and office dogs.",
+  "You talk directly to the creators—no “Let me check with the team” nonsense. We are the team.",
+  "We don’t do it for the hustle culture. We build because we love it—and that shows in our work."
 ];
 
 export default function ChooseUs() {
@@ -59,9 +60,10 @@ export default function ChooseUs() {
           Why Choose Us?
         </h2>
         <p className="text-4xl md:text-5xl GeistBold">
-          We build websites, design stuff that actually looks good, and help
-          brands stand out online. Whether you need a logo or a landing page,
-          Arctic Base has your back—student budget friendly!
+          We’re a team of students who do professional work at affordable
+          prices. We take deadlines seriously, communicate clearly, and always
+          test everything before delivering. Our designs look great, our code is
+          clean, and we make sure the whole process is smooth and easy for you.
         </p>
       </div>
 
@@ -82,9 +84,7 @@ export default function ChooseUs() {
             <div
               className={clsx(
                 "group-hover:text-background text-4xl md:text-5xl GeistBold transition-all duration-500",
-                isActive(index)
-                  ? "text-background"
-                  : "text-foreground"
+                isActive(index) ? "text-background" : "text-foreground"
               )}
             >
               0{index + 1}
@@ -92,9 +92,7 @@ export default function ChooseUs() {
             <div
               className={clsx(
                 "group-hover:text-background text-2xl md:text-3xl GeistBold w-[70%] GeistBold transition-all duration-500",
-                isActive(index)
-                  ? "text-background"
-                  : "text-foreground"
+                isActive(index) ? "text-background" : "text-foreground"
               )}
             >
               {reason}

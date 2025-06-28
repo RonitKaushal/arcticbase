@@ -85,86 +85,6 @@ const serviceCategories: ServiceCategory[] = [
     ],
   },
   {
-    category: "Marketing & Strategy",
-    services: [
-      {
-        title: "Social Media Strategy",
-        description:
-          "We help you go viral—or at least get your mom to share your posts.",
-      },
-      {
-        title: "Ad Campaigns",
-        description:
-          "Launch ad campaigns that don’t feel like ads. Or at least don’t suck.",
-      },
-      {
-        title: "Email Marketing",
-        description:
-          "We write emails that people actually open—no “unsubscribe” panic attacks here.",
-      },
-    ],
-  },
-  {
-    category: "UX/UI Design",
-    services: [
-      {
-        title: "Wireframing",
-        description:
-          "We sketch out your dreams so you don’t end up in a design nightmare.",
-      },
-      {
-        title: "Interactive Prototypes",
-        description:
-          "Clickable mockups so real, you’ll swear they’re already live.",
-      },
-      {
-        title: "User Testing",
-        description:
-          "We nail down pain points so your users won’t stab you with virtual pitchforks.",
-      },
-    ],
-  },
-  {
-    category: "SEO & Analytics",
-    services: [
-      {
-        title: "SEO Audits",
-        description:
-          "We sniff out hidden SEO issues so you can outrank that spammy site next door.",
-      },
-      {
-        title: "Keyword Strategy",
-        description:
-          "We pick keywords that drive traffic—no more shouting into the void.",
-      },
-      {
-        title: "Performance Tracking",
-        description:
-          "We monitor clicks and conversions so you’re never blind to your own brilliance.",
-      },
-    ],
-  },
-  {
-    category: "Content Creation",
-    services: [
-      {
-        title: "Copywriting",
-        description:
-          "Persuasive copy that sells without feeling like a used-car pitch.",
-      },
-      {
-        title: "Blog Management",
-        description:
-          "We keep your blog buzzing so you don’t after three posts go radio silent.",
-      },
-      {
-        title: "Video Production",
-        description:
-          "Short videos that captivate—yes, people still watch video these days.",
-      },
-    ],
-  },
-  {
     category: "Hosting & DevOps",
     services: [
       {
@@ -204,26 +124,12 @@ const serviceCategories: ServiceCategory[] = [
       },
     ],
   },
-  {
-    category: "Workshops & Training",
-    services: [
-      {
-        title: "Team Workshops",
-        description:
-          "Interactive sessions that won’t feel like corporate death by PowerPoint.",
-      },
-      {
-        title: "1-on-1 Coaching",
-        description:
-          "Personalized coaching so you actually learn something instead of dozing off.",
-      },
-    ],
-  },
 ];
 
-
 export default function Services() {
-  const [scrollActiveIndex, setScrollActiveIndex] = useState<number | null>(null);
+  const [scrollActiveIndex, setScrollActiveIndex] = useState<number | null>(
+    null
+  );
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const sectionRefs = useRef<(HTMLDivElement | null)[]>([]);
 
@@ -256,7 +162,10 @@ export default function Services() {
   }, []);
 
   const isActive = (index: number) => {
-    return hoveredIndex === index || (hoveredIndex === null && scrollActiveIndex === index);
+    return (
+      hoveredIndex === index ||
+      (hoveredIndex === null && scrollActiveIndex === index)
+    );
   };
 
   return (
@@ -266,54 +175,60 @@ export default function Services() {
           Our Services
         </h2>
         <p className="text-4xl md:text-5xl GeistBold">
-          We build websites, design stuff that actually looks good, and help
-          brands stand out online. Whether you need a logo or a landing page,
-          Arctic Base has your back—student budget friendly!
+          We offer web development, design, branding, and more—everything you
+          need to bring your ideas to life, done by students who actually care
+          (and won’t overcharge you).
         </p>
       </div>
 
       {serviceCategories.map((group, groupIndex) => (
-        <div key={groupIndex} className="w-full flex flex-col md:flex-row justify-between items-start my-20 max-w-6xl border-t border-primary">
+        <div
+          key={groupIndex}
+          className="w-full flex flex-col md:flex-row justify-between items-start my-20 max-w-6xl border-t border-primary"
+        >
           <h3 className="md:w-[40%] w-full text-4xl md:text-5xl GeistBold mb-6 text-primary uppercase py-10">
             {group.category}
           </h3>
           <div className="flex flex-col justify-start items-start w-full md:w-[60%]">
-          {group.services.map((service, index) => {
-            const absoluteIndex = serviceCategories
-              .slice(0, groupIndex)
-              .reduce((acc, curr) => acc + curr.services.length, 0) + index;
+            {group.services.map((service, index) => {
+              const absoluteIndex =
+                serviceCategories
+                  .slice(0, groupIndex)
+                  .reduce((acc, curr) => acc + curr.services.length, 0) + index;
 
-            return (
-              <div
-                key={absoluteIndex}
-                ref={(el) => {
-                  sectionRefs.current[absoluteIndex] = el;
-                }}
-                onMouseEnter={() => setHoveredIndex(absoluteIndex)}
-                onMouseLeave={() => setHoveredIndex(null)}
-                className={clsx(
-                  "transition-all duration-500 ease-in-out flex flex-col justify-center items-center border-y w-full py-10",
-                  isActive(absoluteIndex)
-                    ? "bg-primary text-background"
-                    : "bg-background text-foreground"
-                )}
-              >
-                <div className="flex flex-col justify-between items-center w-full md:px-0 max-w-6xl">
-                  <p className="w-[95%] text-left text-4xl md:text-5xl GeistBold">
-                    {service.title}
-                  </p>
-                  <p
-                    className={clsx(
-                      "w-[95%] max-w-[700px] mt-3 md:mt-0 text-left text-sm md:text-xl text-background transition-all duration-500",
-                      isActive(absoluteIndex) ? "opacity-100 h-10" : "opacity-0 h-0"
-                    )}
-                  >
-                    {service.description}
-                  </p>
+              return (
+                <div
+                  key={absoluteIndex}
+                  ref={(el) => {
+                    sectionRefs.current[absoluteIndex] = el;
+                  }}
+                  onMouseEnter={() => setHoveredIndex(absoluteIndex)}
+                  onMouseLeave={() => setHoveredIndex(null)}
+                  className={clsx(
+                    "transition-all duration-500 ease-in-out flex flex-col justify-center items-center border-y w-full py-10",
+                    isActive(absoluteIndex)
+                      ? "bg-primary text-background"
+                      : "bg-background text-foreground"
+                  )}
+                >
+                  <div className="flex flex-col justify-between items-center w-full md:px-0 max-w-6xl">
+                    <p className="w-[95%] text-left text-4xl md:text-5xl GeistBold">
+                      {service.title}
+                    </p>
+                    <p
+                      className={clsx(
+                        "w-[95%] max-w-[700px] mt-3 md:mt-0 text-left text-sm md:text-xl text-background transition-all duration-500",
+                        isActive(absoluteIndex)
+                          ? "opacity-100 h-10"
+                          : "opacity-0 h-0"
+                      )}
+                    >
+                      {service.description}
+                    </p>
+                  </div>
                 </div>
-              </div>
-            );
-          })}
+              );
+            })}
           </div>
           {/* /////// */}
         </div>

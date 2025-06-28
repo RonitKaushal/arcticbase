@@ -22,7 +22,7 @@ export default function ContactDialog({ children }: ContactDialogProps) {
       <DialogContent>
         <DialogHeader>
           <DialogTitle className="text-xl md:text-2xl w-full text-left text-primary uppercase">
-            Let&rsquos talk
+            Let`&apos;`s talk
           </DialogTitle>
           <DialogDescription className="Geist text-sm w-full text-left text-foreground/50">
             Contact us to discuss business opportunities, or just to say hello. you can also mail: <span className="text-primary/50">Hello@ArcticBase.tech</span>
