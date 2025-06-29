@@ -13,7 +13,7 @@ export default function Hero() {
       </div>
       <div className="flex flex-col md:flex-row-reverse md:items-center items-start justify-between  mt-10 w-[95%]">
         <p className="w-full max-w-[700px] Geist text-sm md:text-xl">
-          We’re Arctic Base — not an agency, not a startup, just a bunch of
+          We’re Arcticbase — not an agency, not a startup, just a bunch of
           skilled students monetizing what we love. No bosses, no titles, just
           pure teamwork, trust, and a little chaos. We work smart, laugh harder,
           and deliver big.
