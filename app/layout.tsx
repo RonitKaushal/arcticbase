@@ -5,6 +5,10 @@ import NavBar from "@/components/home/navbar";
 import Footer from "@/components/home/footer";
 import { Analytics } from "@vercel/analytics/next";
 
+import { Toaster } from 'sonner';
+
+
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -34,9 +38,9 @@ export const metadata = {
   authors: [{ name: "Ronit Kaushal", url: "https://arcticbase.tech" }],
   creator: "Ronit Kaushal",
   icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon.ico",
-    apple: "/apple-touch-icon.png",
+    icon: "/favicon.png",
+    shortcut: "/favicon.png",
+    apple: "/favicon.png",
     other: [
       {
         rel: "icon",
@@ -49,7 +53,7 @@ export const metadata = {
     title: "Arctic Base – Student Team for Web Development & Design",
     description:
       "We’re a group of passionate students building high-quality websites, branding, and UI/UX—without the agency price tag.",
-    url: "https://arctic-base.vercel.app",
+    url: "https://arcticbase.tech",
     siteName: "Arctic Base",
     images: [
       {
@@ -69,7 +73,7 @@ export const metadata = {
       "Affordable, high-quality web and design services by students. We create clean, fast, and modern websites with passion.",
     images: ["https://arctic-base.vercel.app/og-image.jpg"],
   },
-  metadataBase: new URL("https://arctic-base.vercel.app"),
+  metadataBase: new URL("https://arcticbase.tech"),
 };
 
 export const runtime = "edge";
@@ -92,6 +96,7 @@ export default function RootLayout({
         >
           <NavBar />
           <Analytics />
+          <Toaster richColors position="top-right" />
           {children}
           <Footer />
         </ThemeProvider>
