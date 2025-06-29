@@ -10,7 +10,7 @@ export async function POST(req: Request): Promise<Response> {
 
     await resend.emails.send({
       from: 'Ronit via Arctic Base <onboarding@resend.dev>',
-      to: ['yourgmail@gmail.com'], // Replace with your Gmail
+      to: ['ronitkaushal445@gmail.com'], // Replace with your Gmail
       subject: `New message from ${name}`,
       html: `
         <p><strong>Name:</strong> ${name}</p>
@@ -31,7 +31,7 @@ export async function POST(req: Request): Promise<Response> {
       errorMessage = err.message;
     }
 
-    
+
     return new Response(
       JSON.stringify({ message: 'Failed to send message', error: errorMessage }),
       {
