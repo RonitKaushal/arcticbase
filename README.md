@@ -1,13 +1,13 @@
-# ❄️ Arctic Base – Student-powered Web Development
+# ❄️ arcticbase – Student-powered Web Development
 
-Welcome to the official repository of [Arctic Base](https://arcticbase.tech) — a creative web agency run by students who build modern, fast, and affordable websites with zero corporate drama.  
+Welcome to the official repository of [arcticbase](https://arcticbase.tech) — a creative web agency run by students who build modern, fast, and affordable websites with zero corporate drama.  
 We don't have a physical office, but we do have real skills.
 
 ---
 
 ## 🚀 Live Website
 
-👉 [Visit Arctic Base](https://arcticbase.tech)
+👉 [Visit arcticbase](https://arcticbase.tech)
 
 ---
 
