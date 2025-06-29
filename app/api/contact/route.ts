@@ -1,38 +1,42 @@
-// app/api/contact/route.ts
+import { Resend } from 'resend';
 
-export const runtime = "nodejs"; // ✅ force node runtime
+export const runtime = 'edge';
 
-import { NextRequest, NextResponse } from "next/server";
-import nodemailer from "nodemailer";
+const resend = new Resend(process.env.RESEND_API_KEY);
 
-export async function POST(req: NextRequest) {
+export async function POST(req: Request): Promise<Response> {
   try {
     const { name, email, message } = await req.json();
 
-    const transporter = nodemailer.createTransport({
-      host: "smtp.gmail.com",
-      port: 465,
-      secure: true,
-      auth: {
-        user: process.env.SMTP_EMAIL,
-        pass: process.env.SMTP_PASS,
-      },
-    });
-
-    await transporter.verify();
-
-    await transporter.sendMail({
-      from: `"${name}" <${process.env.SMTP_EMAIL}>`,
-      to: process.env.SMTP_EMAIL,
-      subject: `New Inquiry from ${name}`,
-      text: `Name: ${name}\nEmail: ${email}\nMessage:\n${message}`,
+    await resend.emails.send({
+      from: 'Ronit via Arctic Base <onboarding@resend.dev>',
+      to: ['yourgmail@gmail.com'], // Replace with your Gmail
+      subject: `New message from ${name}`,
+      html: `
+        <p><strong>Name:</strong> ${name}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Message:</strong><br>${message.replace(/\n/g, '<br>')}</p>
+      `,
       replyTo: email,
     });
 
-    return NextResponse.json({ message: "Email sent successfully!" });
-  } catch (error: unknown) {
-    // Type narrowing
-    const errorMessage = error instanceof Error ? error.message : "Server error";
-    return NextResponse.json({ message: errorMessage }, { status: 500 });
+    return new Response(JSON.stringify({ message: 'Message sent successfully!' }), {
+      status: 200,
+      headers: { 'Content-Type': 'application/json' },
+    });
+  } catch (err: unknown) {
+    let errorMessage = 'Unexpected error';
+
+    if (err instanceof Error) {
+      errorMessage = err.message;
+    }
+
+    return new Response(
+      JSON.stringify({ message: 'Failed to send message', error: errorMessage }),
+      {
+        status: 500,
+        headers: { 'Content-Type': 'application/json' },
+      }
+    );
   }
 }
