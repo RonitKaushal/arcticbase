@@ -31,6 +31,7 @@ export async function POST(req: Request): Promise<Response> {
       errorMessage = err.message;
     }
 
+    
     return new Response(
       JSON.stringify({ message: 'Failed to send message', error: errorMessage }),
       {
