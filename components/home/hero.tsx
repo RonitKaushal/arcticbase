@@ -1,4 +1,4 @@
-import ContactDialog from "../ContactDialog";
+import Link from "next/link";
 import { Button } from "../ui/button";
 
 export default function Hero() {
@@ -18,11 +18,11 @@ export default function Hero() {
           pure teamwork, trust, and a little chaos. We work smart, laugh harder,
           and deliver big.
         </p>
-        <ContactDialog>
+        <Link href="/Contact">
           <Button className="w-auto bg-primary text-background p-7 text-xl rounded-full mt-10 md:mt-0 GeistBold uppercase">
             Start a project
           </Button>
-        </ContactDialog>
+        </Link>
       </div>
     </div>
   );

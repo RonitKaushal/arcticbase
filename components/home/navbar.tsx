@@ -8,9 +8,6 @@ import { Button } from "../ui/button";
 import { Menu, X } from "lucide-react";
 import { initLenis, destroyLenis } from "@/hooks/useLenis";
 
-import ContactDialog from "@/components/ContactDialog";
-
-
 export default function NavBar() {
   useEffect(() => {
     initLenis();
@@ -28,7 +25,6 @@ export default function NavBar() {
     { label: "About", href: "/About" },
     { label: "Services", href: "/Services" },
     { label: "Contact", href: "/Contact" },
-
   ];
 
   return (
@@ -60,11 +56,11 @@ export default function NavBar() {
               </Link>
             ))}
 
-            <ContactDialog>
+            <Link href="/Contact">
               <Button className="bg-primary text-background px-6 py-2 text-lg rounded-full GeistBold uppercase">
                 Let’s Talk
               </Button>
-            </ContactDialog>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -97,11 +93,11 @@ export default function NavBar() {
             </Link>
           ))}
           <div className="absolute flex flex-col justify-center items-center bottom-[0px] p-0 m-0 w-[95%] h-auto">
-            <ContactDialog>
+            <Link href="/Contact">
               <Button className="w-[90%] bg-primary text-background py-7 text-2xl rounded-full GeistBold uppercase">
                 Let’s Talk
               </Button>
-            </ContactDialog>
+            </Link>
           </div>
         </div>
       </div>

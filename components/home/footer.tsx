@@ -33,6 +33,18 @@ export default function Footer() {
     }
   };
 
+  const socialLinks = [
+    { name: "LinkedIn", href: "https://www.linkedin.com/company/arctic-base" },
+    { name: "Instagram", href: "https://www.instagram.com/arcticbase.tech" },
+    {
+      name: "Facebook",
+      href: "https://www.facebook.com/people/Arctic-Base/pfbid0vzkY6L8XPNzn8FCTx8LTNVWwsEebh7Jd2ACNUJs8X4L3vsFePHwbYwfsRtgug9Vjl/",
+    },
+    { name: "Behance", href: "https://www.behance.net/arcticbase" },
+    { name: "Dribbble", href: "https://dribbble.com/arcticbase-org" },
+    { name: "X", href: "https://x.com/arcticbase_tech" },
+  ];
+
   return (
     <div className="relative flex flex-col w-full items-center justify-center bg-white/5">
       <div className="relative flex flex-col items-center justify-center GeistMedium max-w-6xl w-[95%] mt-40">
@@ -65,27 +77,20 @@ export default function Footer() {
       <div className="flex justify-center items-center mt-30 border-y w-full border-foreground">
         <div className="w-full max-w-6xl h-auto">
           <div className="flex flex-col md:flex-row justify-between items-start w-[95%] h-auto text-3xl border-foreground uppercase transition-all duration-500 py-5">
-            <a className="flex justify-start items-start p-0 GeistBold w-auto bg-transparents hover:text-primary cursor-pointer">
-              LinkedIn
-            </a>
-            <a className="flex justify-start items-start p-0 GeistBold w-auto bg-transparents hover:text-primary cursor-pointer">
-              Instagram
-            </a>
-            <a className="flex justify-start items-start p-0 GeistBold w-auto  bg-transparents hover:text-primary cursor-pointer">
-              FaceBook
-            </a>
-            <a className="flex justify-start items-start p-0 GeistBold w-auto  bg-transparents hover:text-primary cursor-pointer">
-              Behence
-            </a>
-            <a className="flex justify-start items-start p-0 GeistBold w-auto  bg-transparents hover:text-primary cursor-pointer">
-              Dribbble
-            </a>
-            <a className="flex justify-start items-start p-0 GeistBold w-auto  bg-transparents hover:text-primary cursor-pointer">
-              X
-            </a>
+            {socialLinks.map((link) => (
+              <a
+                key={link.name}
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex justify-start items-start p-0 GeistBold w-auto bg-transparents hover:text-primary cursor-pointer"
+              >
+                {link.name}
+              </a>
+            ))}
           </div>
         </div>
-      </div>
+      </div>{" "}
       <p>© ARCTIC BASE 2025</p>
     </div>
   );

@@ -1,59 +1,72 @@
-export default function Testimony() {
+import Image from "next/image";
+
+const teamMembers = [
+  {
+    name: "Ronit Kaushal",
+    role: "Front-End Developer",
+    image: "/reviews/review1.png",
+  },
+  {
+    name: "Khushi Kaushal",
+    role: "UI UX Designer",
+    image: "/reviews/review2.png",
+  },
+
+  {
+    name: "Het Jani",
+    role: "Back-End Developer",
+    image: "/reviews/review3.png",
+  },
+  {
+    name: "Heshva Soni",
+    role: "AI-ML Engineer",
+    image: "/reviews/review4.png",
+  },
+];
+
+export const runtime = "edge";
+
+export default function Testimonials() {
   return (
-    <div className="relative flex flex-col w-full items-center justify-center">
-      <div className="flex justify-center items-center mt-30 border-y w-full border-foreground">
-        <div className="columns-2 md:columns-3 lg:columns-4 gap-0 column-rule-solid-6 w-full max-w-6xl h-auto">
-          <div className="group flex flex-col justify-center items-center w-full h-60 border-foreground hover:bg-primary hover:text-background transition-all duration-500">
-            <p className="GeistBold text-xl w-[95%] text-left">
-              Didn’t expect much, Now I recommend them to everyone
-            </p>
-
-            <p className="group-hover:text-background transition-all duration-500 Geist text-sm w-[95%] text-left mt-4 text-foreground/50">
-              Brindesh Patel
-            </p>
-            <p className="group-hover:text-background transition-all duration-500 Geist text-sm w-[95%] text-left text-primary/50">
-              Founder of TECH RATIONAL
-            </p>
-          </div>
-
-          <div className="group flex flex-col justify-center items-center w-full h-60 border-foreground hover:bg-primary hover:text-background transition-all duration-500">
-            <p className="GeistBold text-xl w-[95%] text-left">
-              Didn’t expect much, Now I recommend them to everyone
-            </p>
-
-            <p className="group-hover:text-background transition-all duration-500 Geist text-sm w-[95%] text-left mt-4 text-foreground/50">
-              Brindesh Patel
-            </p>
-            <p className="group-hover:text-background transition-all duration-500 Geist text-sm w-[95%] text-left text-primary/50">
-              Founder of TECH RATIONAL
-            </p>
-          </div>
-          <div className="group flex flex-col justify-center items-center w-full h-60 border-foreground hover:bg-primary hover:text-background transition-all duration-500">
-            <p className="GeistBold text-xl w-[95%] text-left">
-              Didn’t expect much, Now I recommend them to everyone
-            </p>
-
-            <p className="group-hover:text-background transition-all duration-500 Geist text-sm w-[95%] text-left mt-4 text-foreground/50">
-              Brindesh Patel
-            </p>
-            <p className="group-hover:text-background transition-all duration-500 Geist text-sm w-[95%] text-left text-primary/50">
-              Founder of TECH RATIONAL
-            </p>
-          </div>
-          <div className="group flex flex-col justify-center items-center w-full h-60 border-foreground hover:bg-primary hover:text-background transition-all duration-500">
-            <p className="GeistBold text-xl w-[95%] text-left">
-              Didn’t expect much, Now I recommend them to everyone
-            </p>
-
-            <p className="group-hover:text-background transition-all duration-500 Geist text-sm w-[95%] text-left mt-4 text-foreground/50">
-              Brindesh Patel
-            </p>
-            <p className="group-hover:text-background transition-all duration-500 Geist text-sm w-[95%] text-left text-primary/50">
-              Founder of TECH RATIONAL
-            </p>
-          </div>
-        </div>
+    <div className="relative flex flex-col w-full items-center justify-center my-32">
+      {/* Section Heading */}
+      <div className="relative flex flex-col items-center justify-center uppercase GeistMedium max-w-6xl w-[95%] mt-40">
+        <h2 className="text-xl md:text-2xl w-full text-left text-primary">
+          testimonials
+        </h2>
+        <p className="text-4xl md:text-5xl GeistBold">
+          Real words from the people who believed in our work, trusted the
+          process, and loved the results.
+        </p>
       </div>
+
+      {/* Testimonials Grid */}
+
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 md:gap-6 max-w-6xl w-[95%] my-20">
+        {teamMembers.map((member, index) => (
+          <div
+            key={index}
+            className="flex flex-col items-center text-left space-y-1"
+          >
+            <div className="relative w-full aspect-[3/4] overflow-hidden">
+              <Image
+                src={member.image}
+                alt={member.name}
+                fill
+                className="object-cover"
+              />
+            </div>
+            <h2 className="GeistMedium text-lg font-semibold w-full text-left">
+              {member.name}
+            </h2>
+            <h3 className="Geist text-sm text-muted-foreground w-full text-left">
+              {member.role}
+            </h3>
+          </div>
+        ))}
+      </div>
+
+      {/* ////////// */}
     </div>
   );
 }
