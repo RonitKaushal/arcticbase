@@ -13,6 +13,9 @@ interface ServiceCategory {
   services: Service[];
 }
 
+export const runtime = "edge";
+
+
 const serviceCategories: ServiceCategory[] = [
   {
     category: "Web Design ",

@@ -49,6 +49,9 @@ const teamMembers = [
   // },
 ];
 
+export const runtime = "edge";
+
+
 export default function AboutPage() {
   return (
     <div className="relative flex flex-col w-full items-center justify-center">

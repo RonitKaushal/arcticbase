@@ -7,6 +7,8 @@ import Hero from "@/components/home/hero";
 import Services from "@/components/home/services";
 import Testimony from "@/components/home/testimony";
 
+export const runtime = "edge";
+
 export default function Home() {
 
   return (

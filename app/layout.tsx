@@ -72,6 +72,8 @@ export const metadata = {
   metadataBase: new URL("https://arctic-base.vercel.app"),
 };
 
+export const runtime = "edge";
+
 export default function RootLayout({
   children,
 }: Readonly<{
