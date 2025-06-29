@@ -19,7 +19,7 @@ export async function POST(req: NextRequest) {
     },
   });
 
-  try {
+ try {
     await transporter.sendMail({
       from: `Contact Form <${process.env.SMTP_USER}>`,
       to: "hello@arcticbase.tech",
@@ -29,6 +29,7 @@ export async function POST(req: NextRequest) {
     });
     return NextResponse.json({ success: true });
   } catch (error) {
+    console.error("Failed to send email:", error);
     return NextResponse.json({ error: "Failed to send email" }, { status: 500 });
   }
 }
