@@ -40,7 +40,8 @@ const ContactForm = () => {
       setName("");
       setEmail("");
       setMessage("");
-    } catch (error) {
+    } catch (e) {
+      console.error(e); // ✅ using the error to avoid lint error
       toast.error("Something went wrong. Please try again.");
     } finally {
       setLoading(false);
@@ -107,6 +108,7 @@ const ContactForm = () => {
           </button>
         </form>
       </div>
+
       <div className="w-full max-w-6xl mx-auto px-4 py-10">
         <p className="text-lg text-muted-foreground mb-6 max-w-xl">
           Quickly connect and directly discuss your project requirements with

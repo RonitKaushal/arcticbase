@@ -30,7 +30,9 @@ export async function POST(req: NextRequest) {
     });
 
     return NextResponse.json({ message: "Email sent successfully!" });
-  } catch (error: any) {
-    return NextResponse.json({ message: error.message || "Server error" }, { status: 500 });
+  } catch (error: unknown) {
+    // Type narrowing
+    const errorMessage = error instanceof Error ? error.message : "Server error";
+    return NextResponse.json({ message: errorMessage }, { status: 500 });
   }
 }
