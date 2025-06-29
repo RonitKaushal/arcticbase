@@ -4,38 +4,38 @@ const teamMembers = [
   {
     name: "Ronit Kaushal",
     role: "Front-End Developer",
-    image: "/members/Ronit Kaushal.png",
+    image: "/members/Ronit_Kaushal.png",
   },
   {
     name: "Khushi Kaushal",
     role: "UI UX Designer",
-    image: "/members/Khushi Kaushal.png",
+    image: "/members/Khushi_Kaushal.png",
   },
 
   {
     name: "Het Jani",
     role: "Back-End Developer",
-    image: "/members/Het Jani.png",
+    image: "/members/Het_Jani.png",
   },
   {
     name: "Heshva Soni",
     role: "AI-ML Engineer",
-    image: "/members/Heshva Soni.png",
+    image: "/members/Heshva_Soni.png",
   },
   {
     name: "Hardi Patel",
     role: "Front-End Developer",
-    image: "/members/Hardi Patel.png",
+    image: "/members/Hardi_Patel.png",
   },
   {
     name: "Tirth Chokshi",
     role: "Back-end Developer",
-    image: "/members/Tirth chokshi.png",
+    image: "/members/Tirth_chokshi.png",
   },
   {
     name: "Devanshi Makwana",
     role: "HTML Developer",
-    image: "/members/Devanshi Makwan.png",
+    image: "/members/Devanshi_Makwan.png",
   },
   {
     name: "Bikram Sadhukhan",
@@ -45,7 +45,7 @@ const teamMembers = [
   // {
   //   name: "Diya Pandya",
   //   role: "Marketing Lead",
-  //   image: "/members/Diya Pandya.png",
+  //   image: "/members/Diya_Pandya.png",
   // },
 ];
 

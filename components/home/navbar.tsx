@@ -37,7 +37,7 @@ export default function NavBar() {
           <div className="flex-shrink-0">
             <Link href="/">
               <Image
-                src="/Arctic Base logo.png"
+                src="/Arctic_Base_logo.png"
                 alt="Logo"
                 width={250}
                 height={50}
