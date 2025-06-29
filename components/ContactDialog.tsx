@@ -25,7 +25,7 @@ export default function ContactDialog({ children }: ContactDialogProps) {
             Let`&apos;`s talk
           </DialogTitle>
           <DialogDescription className="Geist text-sm w-full text-left text-foreground/50">
-            Contact us to discuss business opportunities, or just to say hello. you can also mail: <span className="text-primary/50">Hello@ArcticBase.tech</span>
+            Contact us to discuss business opportunities, or just to say hello. you can also mail: <span className="text-primary/50">hello@arcticbase.tech</span>
           </DialogDescription>
         </DialogHeader>
         <input

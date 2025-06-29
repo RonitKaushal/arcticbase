@@ -6,7 +6,7 @@ import { useState } from "react";
 
 export default function Footer() {
   const [copied, setCopied] = useState(false);
-  const email = "Hello@ArcticBase.tech";
+  const email = "hello@arcticbase.tech";
 
   const handleCopy = () => {
     if (navigator.clipboard && window.isSecureContext) {
@@ -86,7 +86,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <p>© ARCTIC BASE 2025</p>
+      <p>© arcticbase 2025</p>
     </div>
   );
 }
