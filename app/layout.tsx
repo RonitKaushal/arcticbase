@@ -57,7 +57,7 @@ export const metadata = {
     siteName: "ArcticBase",
     images: [
       {
-        url: "https://arctic-base.vercel.app/og-image.jpg", // Replace with your image URL
+        url: "https://arcticbase.tech/og-image.jpg", // Replace with your image URL
         width: 1200,
         height: 630,
         alt: "ArcticBase Website Preview",
@@ -71,7 +71,7 @@ export const metadata = {
     title: "ArcticBase – Student Team for Web Development & Design",
     description:
       "Affordable, high-quality web and design services by students. We create clean, fast, and modern websites with passion.",
-    images: ["https://arctic-base.vercel.app/og-image.jpg"],
+    images: ["https://arcticbase.tech/og-image.jpg"],
   },
   metadataBase: new URL("https://arcticbase.tech"),
 };
