@@ -20,9 +20,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Arctic Base – Student Team for Web Development & Design",
+  title: "ArcticBase – Student Team for Web Development & Design",
   description:
-    "Arctic Base is a student-led team offering affordable, professional web development, design, and branding services. No hierarchy, just trust, teamwork, and great results.",
+    "ArcticBase is a student-led team offering affordable, professional web development, design, and branding services. No hierarchy, just trust, teamwork, and great results.",
   keywords: [
     "Arctic Base",
     "student developers",
@@ -54,13 +54,13 @@ export const metadata = {
     description:
       "We’re a group of passionate students building high-quality websites, branding, and UI/UX—without the agency price tag.",
     url: "https://arcticbase.tech",
-    siteName: "Arctic Base",
+    siteName: "ArcticBase",
     images: [
       {
         url: "https://arctic-base.vercel.app/og-image.jpg", // Replace with your image URL
         width: 1200,
         height: 630,
-        alt: "Arctic Base Website Preview",
+        alt: "ArcticBase Website Preview",
       },
     ],
     locale: "en_US",
@@ -68,7 +68,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Arctic Base – Student Team for Web Development & Design",
+    title: "ArcticBase – Student Team for Web Development & Design",
     description:
       "Affordable, high-quality web and design services by students. We create clean, fast, and modern websites with passion.",
     images: ["https://arctic-base.vercel.app/og-image.jpg"],
