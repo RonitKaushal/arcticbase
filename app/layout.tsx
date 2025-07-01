@@ -50,7 +50,7 @@ export const metadata = {
     ],
   },
   openGraph: {
-    title: "Arctic Base – Student Team for Web Development & Design",
+    title: "ArcticBase – Student Team for Web Development & Design",
     description:
       "We’re a group of passionate students building high-quality websites, branding, and UI/UX—without the agency price tag.",
     url: "https://arcticbase.tech",

@@ -91,7 +91,7 @@ export default function Footer() {
           </div>
         </div>
       </div>{" "}
-      <p>© ARCTIC BASE 2025</p>
+      <p>© ARCTICBASE 2025</p>
     </div>
   );
 }

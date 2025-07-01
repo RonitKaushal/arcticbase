@@ -2,13 +2,13 @@ import Image from "next/image";
 
 const teamMembers = [
   {
-    name: "Ronit Kaushal",
-    role: "Front-End Developer",
+    name: "Brindesh Patel",
+    role: "Founder of Tech Rational",
     image: "/reviews/review1.png",
   },
   {
-    name: "Khushi Kaushal",
-    role: "UI UX Designer",
+    name: "Tushar Joshi",
+    role: "Founder of Buddyse",
     image: "/reviews/review2.png",
   },
 

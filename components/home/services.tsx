@@ -89,7 +89,7 @@ export default function Services() {
         <p className="text-4xl md:text-5xl GeistBold">
           We build websites, design stuff that actually looks good, and help
           brands stand out online. Whether you need a logo or a landing page,
-          Arctic Base has your back—student budget friendly!
+          ArcticBase has your back—student budget friendly!
         </p>
       </div>
 

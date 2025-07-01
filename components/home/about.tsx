@@ -6,7 +6,7 @@ export default function About() {
           about us
         </h2>
         <p className="text-4xl md:text-5xl GeistBold">
-          At Arctic Base, we’re just a bunch of students trying to turn caffeine
+          At ArcticBase, we’re just a bunch of students trying to turn caffeine
           and code into cash. We build cool websites, design awesome stuff, and
           help brands glow up online—affordably!
         </p>
