@@ -93,7 +93,7 @@ export default function NavBar() {
             </Link>
           ))}
           <div className="absolute flex flex-col justify-center items-center bottom-[0px] p-0 m-0 w-[95%] h-auto">
-            <Link href="/Contact">
+            <Link href="/Contact" className="flex justify-center items-center w-full">
               <Button className="w-[90%] bg-primary text-background py-7 text-2xl rounded-full GeistBold uppercase">
                 Let’s Talk
               </Button>
