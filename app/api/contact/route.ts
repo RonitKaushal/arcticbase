@@ -20,7 +20,16 @@ const createTransporter = () => {
 
 export async function POST(req: Request): Promise<Response> {
   try {
-    const { name, email, phone, service, message } = await req.json();
+    const {
+      name,
+      email,
+      phone,
+      service,
+      message,
+      acceptedTerms,
+      company,
+      useCase,
+    } = await req.json();
 
     const transporter = createTransporter();
 
@@ -33,10 +42,13 @@ export async function POST(req: Request): Promise<Response> {
           <p><strong style="color: #333;">Name:</strong> ${name}</p>
           <p><strong style="color: #333;">Email:</strong> <a href="mailto:${email}">${email}</a></p>
           <p><strong style="color: #333;">Phone:</strong> ${phone || 'Not provided'}</p>
+          <p><strong style="color: #333;">Company:</strong> ${company || 'Not provided'}</p>
+          <p><strong style="color: #333;">Use case:</strong> ${useCase || 'Not provided'}</p>
           <p><strong style="color: #333;">Service Required:</strong> ${service || 'Not specified'}</p>
+          <p><strong style="color: #333;">Terms &amp; Conditions accepted:</strong> ${acceptedTerms ? 'Yes' : 'No'}</p>
           <div style="margin-top: 20px; padding: 15px; background-color: #f5f5f5; border-left: 4px solid #e50914;">
             <strong style="color: #333;">Message:</strong>
-            <p style="margin-top: 10px; white-space: pre-wrap;">${message.replace(/\n/g, '<br>')}</p>
+            <p style="margin-top: 10px; white-space: pre-wrap;">${(message || '').replace(/\n/g, '<br>')}</p>
           </div>
         </div>
         <p style="margin-top: 30px; color: #666; font-size: 12px;">

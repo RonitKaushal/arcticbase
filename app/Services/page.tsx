@@ -127,6 +127,26 @@ const serviceCategories: ServiceCategory[] = [
       },
     ],
   },
+  {
+    category: "WhatsApp Business Messaging",
+    services: [
+      {
+        title: "Official API integration",
+        description:
+          "Customer engagement, notifications, and support through Meta's WhatsApp Cloud API—policy-compliant, not unofficial bulk tools.",
+      },
+      {
+        title: "Templates & campaigns",
+        description:
+          "Approved message templates, campaign workflows, and delivery insights for businesses with proper opt-in.",
+      },
+      {
+        title: "Automation & CRM hooks",
+        description:
+          "Connect your stack so sales and support teams send the right message at the right time.",
+      },
+    ],
+  },
 ];
 
 export default function Services() {

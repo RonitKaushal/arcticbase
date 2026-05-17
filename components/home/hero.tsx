@@ -13,12 +13,13 @@ export default function Hero() {
       </div>
       <div className="flex flex-col md:flex-row-reverse md:items-center items-start justify-between  mt-10 w-[95%]">
         <p className="w-full max-w-[700px] Geist text-sm md:text-xl">
-          We’re ArcticBase — not an agency, not a startup, just a bunch of
-          skilled students monetizing what we love. No bosses, no titles, just
-          pure teamwork, trust, and a little chaos. We work smart, laugh harder,
-          and deliver big.
+          Arctic Base is a creative and digital agency in Ahmedabad—we build
+          websites, branding, and UI/UX, and we deliver official WhatsApp
+          business communication through Meta&apos;s APIs. A tight student-led
+          team with professional delivery: clear scope, honest pricing, real
+          projects.
         </p>
-        <Link href="/Contact">
+        <Link href="/contact">
           <Button className="w-auto bg-primary text-background p-7 text-xl rounded-full mt-10 md:mt-0 GeistBold uppercase">
             Start a project
           </Button>

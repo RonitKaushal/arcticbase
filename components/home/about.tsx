@@ -6,9 +6,9 @@ export default function About() {
           about us
         </h2>
         <p className="text-4xl md:text-5xl GeistBold">
-          At ArcticBase, we’re just a bunch of students trying to turn caffeine
-          and code into cash. We build cool websites, design awesome stuff, and
-          help brands glow up online—affordably!
+          Arctic Base is a creative and digital agency in Ahmedabad—web
+          development, design, branding, and official WhatsApp business messaging
+          for companies that need real results without agency overhead.
         </p>
       </div>
       <div className="flex justify-center items-center mt-30 border-y w-full border-foreground">

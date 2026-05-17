@@ -59,9 +59,10 @@ export default function AboutPage() {
           about us
         </h2>
         <p className="text-4xl md:text-5xl GeistBold">
-          Arctic Base is a team of passionate students who work together to
-          build real projects with trust, creativity, and skill—without any
-          titles, hierarchy, or corporate rules.
+          Arctic Base is a creative and digital agency in Ahmedabad. We build
+          websites, branding, and UI/UX, and we develop official WhatsApp
+          business communication solutions using Meta&apos;s APIs—delivered by a
+          collaborative team with trust, creativity, and professional standards.
         </p>
       </div>
 
