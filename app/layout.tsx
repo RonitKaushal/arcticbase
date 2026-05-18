@@ -20,20 +20,19 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "ArcticBase – Student Team for Web Development & Design",
+  title: "ArcticBase – Creative & Digital Agency | Web, Design & WhatsApp",
   description:
-    "ArcticBase is a student-led team offering affordable, professional web development, design, and branding services. No hierarchy, just trust, teamwork, and great results.",
+    "Arctic Base is a creative and digital agency in Ahmedabad offering web development, design, branding, and official WhatsApp business messaging through Meta's APIs.",
   keywords: [
     "Arctic Base",
-    "student developers",
-    "web development team",
-    "affordable design services",
-    "Next.js developers",
-    "UI UX student team",
-    "freelance student devs",
-    "affordable website design",
-    "branding services by students",
-    "creative student agency",
+    "creative agency Ahmedabad",
+    "web development",
+    "UI UX design",
+    "branding",
+    "WhatsApp Business API",
+    "WhatsApp Cloud API",
+    "business messaging",
+    "digital agency India",
   ],
   authors: [{ name: "Ronit Kaushal", url: "https://arcticbase.tech" }],
   creator: "Ronit Kaushal",
@@ -50,9 +49,9 @@ export const metadata = {
     ],
   },
   openGraph: {
-    title: "ArcticBase – Student Team for Web Development & Design",
+    title: "ArcticBase – Creative & Digital Agency | Web, Design & WhatsApp",
     description:
-      "We’re a group of passionate students building high-quality websites, branding, and UI/UX—without the agency price tag.",
+      "Web, design, branding, and official WhatsApp business communication for companies—based in Ahmedabad, India.",
     url: "https://arcticbase.tech",
     siteName: "ArcticBase",
     images: [
@@ -68,9 +67,9 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "ArcticBase – Student Team for Web Development & Design",
+    title: "ArcticBase – Creative & Digital Agency",
     description:
-      "Affordable, high-quality web and design services by students. We create clean, fast, and modern websites with passion.",
+      "Web development, design, branding, and WhatsApp business messaging through Meta official APIs.",
     images: ["https://arcticbase.tech/preview.jpg"],
   },
   metadataBase: new URL("https://arcticbase.tech"),

@@ -36,6 +36,11 @@ const services: Service[] = [
     description:
       "Got a weird idea? We’ll turn it into a working app, no matter how weird—or weirder.",
   },
+  {
+    title: "WhatsApp for business",
+    description:
+      "Official business messaging—templates, automation, and campaigns via Meta's WhatsApp APIs.",
+  },
 ];
 
 export default function Services() {
@@ -87,9 +92,8 @@ export default function Services() {
           Our Services
         </h2>
         <p className="text-4xl md:text-5xl GeistBold">
-          We build websites, design stuff that actually looks good, and help
-          brands stand out online. Whether you need a logo or a landing page,
-          ArcticBase has your back—student budget friendly!
+          Websites, branding, UI/UX, and official WhatsApp business messaging—
+          creative and digital services from Ahmedabad, built for real businesses.
         </p>
       </div>
 

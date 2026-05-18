@@ -24,8 +24,9 @@ export default function NavBar() {
     { label: "Home", href: "/" },
     { label: "About", href: "/About" },
     { label: "Services", href: "/Services" },
+    { label: "WhatsApp", href: "/whatsapp-platform" },
     { label: "Projects", href: "/Projects" },
-    { label: "Contact", href: "/Contact" },
+    { label: "Contact", href: "/contact" },
   ];
 
   return (
@@ -57,7 +58,7 @@ export default function NavBar() {
               </Link>
             ))}
 
-            <Link href="/Contact">
+            <Link href="/contact">
               <Button className="bg-primary text-background px-6 py-2 text-lg rounded-full GeistBold uppercase">
                 Let’s Talk
               </Button>
@@ -94,7 +95,7 @@ export default function NavBar() {
             </Link>
           ))}
           <div className="absolute flex flex-col justify-center items-center bottom-[0px] p-0 m-0 w-[95%] h-auto">
-            <Link href="/Contact" className="flex justify-center items-center w-full">
+            <Link href="/contact" className="flex justify-center items-center w-full">
               <Button className="w-[90%] bg-primary text-background py-7 text-2xl rounded-full GeistBold uppercase">
                 Let’s Talk
               </Button>
