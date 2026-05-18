@@ -1,25 +1,16 @@
-import nodemailer from 'nodemailer';
+import { Resend } from 'resend';
 
-// Use Node.js runtime for nodemailer (requires Node.js modules like 'stream')
-export const runtime = 'edge';
-
-// Create transporter using Gmail SMTP
-// Note: Set GMAIL_APP_PASSWORD_RONIT in your .env.local file
-// For production, use environment variables instead of hardcoded passwords
-const createTransporter = () => {
-  const appPassword = process.env.GMAIL_APP_PASSWORD_RONIT || 'iaob ozuz sakg lmkj';
-  
-  return nodemailer.createTransport({
-    service: 'gmail',
-    auth: {
-      user: 'ronitkaushal445@gmail.com',
-      pass: appPassword.replace(/\s/g, ''), // Remove spaces from app password
-    },
-  });
-};
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(req: Request): Promise<Response> {
   try {
+    if (!process.env.RESEND_API_KEY) {
+      return new Response(
+        JSON.stringify({ message: 'Email service not configured' }),
+        { status: 500, headers: { 'Content-Type': 'application/json' } }
+      );
+    }
+
     const {
       name,
       email,
@@ -30,8 +21,6 @@ export async function POST(req: Request): Promise<Response> {
       company,
       useCase,
     } = await req.json();
-
-    const transporter = createTransporter();
 
     const htmlContent = `
       <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
@@ -57,32 +46,28 @@ export async function POST(req: Request): Promise<Response> {
       </div>
     `;
 
-    // Send email to both recipients: ronitkaushal445@gmail.com and hetjani818@gmail.com
     const recipients = ['ronitkaushal445@gmail.com', 'hetjani818@gmail.com'];
-    
-    const mailOptions = {
-      from: 'Arctic Base Contact Form <ronitkaushal445@gmail.com>',
-      to: recipients, // Send to both emails
+
+    const { error } = await resend.emails.send({
+      from:
+        process.env.RESEND_FROM_EMAIL ??
+        'Arctic Base Contact Form <onboarding@resend.dev>',
+      to: recipients,
       subject: `New Contact Form Submission from ${name} - ${service || 'General Inquiry'}`,
       html: htmlContent,
       replyTo: email,
-    };
+    });
 
-    await transporter.sendMail(mailOptions);
-    
-    console.log(`Email sent successfully to: ${recipients.join(', ')}`);
+    if (error) {
+      throw new Error(error.message);
+    }
 
     return new Response(JSON.stringify({ message: 'Message sent successfully!' }), {
       status: 200,
       headers: { 'Content-Type': 'application/json' },
     });
   } catch (err: unknown) {
-    let errorMessage = 'Unexpected error';
-
-    if (err instanceof Error) {
-      errorMessage = err.message;
-    }
-
+    const errorMessage = err instanceof Error ? err.message : 'Unexpected error';
     console.error('Email sending error:', err);
 
     return new Response(
