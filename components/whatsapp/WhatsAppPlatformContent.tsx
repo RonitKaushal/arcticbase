@@ -9,8 +9,6 @@ import {
   LayoutTemplate,
   Workflow,
   BarChart3,
-  Shield,
-  Users,
   Webhook,
   ImageIcon,
   Bot,
